@@ -1,0 +1,283 @@
+:root {
+  --green: #243d2d;
+  --green-dark: #172a20;
+  --cream: #f3ead8;
+  --paper: #e8dcc3;
+  --gold: #ad8950;
+  --brown: #594833;
+  --white: #fffdf7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--cream);
+  color: var(--green-dark);
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.7;
+}
+
+.topbar {
+  min-height: 75px;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--green-dark);
+  color: var(--cream);
+}
+
+.brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.brand span {
+  color: var(--gold);
+}
+
+.header-button {
+  color: var(--cream);
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+.hero {
+  padding: 75px 8%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 55px;
+  background: var(--paper);
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.12;
+}
+
+h1 {
+  font-size: clamp(42px, 5vw, 65px);
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-size: clamp(32px, 4vw, 45px);
+  margin-bottom: 20px;
+}
+
+.hero-description {
+  max-width: 560px;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
+.hero-image img,
+.feature-image img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border: 9px solid var(--cream);
+  box-shadow: 0 15px 35px #30241630;
+}
+
+.primary-button {
+  display: inline-block;
+  background: var(--green);
+  color: white;
+  padding: 17px 27px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.primary-button:hover {
+  background: var(--gold);
+  transform: translateY(-2px);
+}
+
+.small-note {
+  font-size: 11px;
+  color: var(--brown);
+  margin-top: 17px;
+}
+
+.intro {
+  padding: 90px 10%;
+  text-align: center;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.intro p:last-child {
+  max-width: 700px;
+  margin: auto;
+}
+
+.features {
+  padding: 80px 9%;
+  background: var(--green-dark);
+  color: var(--cream);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.features ul {
+  list-style: none;
+  margin-top: 25px;
+}
+
+.features li {
+  padding: 11px 0;
+  border-bottom: 1px solid #ffffff25;
+}
+
+.features li::before {
+  content: "✦ ";
+  color: var(--gold);
+  margin-right: 10px;
+}
+
+.bonuses {
+  padding: 90px 7%;
+  text-align: center;
+}
+
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-top: 45px;
+}
+
+.bonus-card {
+  background: var(--white);
+  padding: 15px;
+  text-align: left;
+  box-shadow: 0 7px 20px #30241612;
+}
+
+.bonus-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.bonus-card h3 {
+  font-size: 22px;
+  margin: 16px 0 8px;
+}
+
+.bonus-card p {
+  font-size: 12px;
+}
+
+.offer {
+  padding: 90px 20px;
+  text-align: center;
+  background: var(--green-dark);
+  color: var(--cream);
+}
+
+.price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 65px;
+  font-weight: 700;
+  color: var(--gold);
+  margin: 20px 0;
+}
+
+.price span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.offer-description {
+  margin-bottom: 25px;
+}
+
+.purchase-button {
+  background: var(--gold);
+  color: #172a20;
+}
+
+.disclaimer {
+  padding: 35px 8%;
+  background: var(--paper);
+  font-size: 11px;
+}
+
+.disclaimer h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background: var(--green-dark);
+  color: var(--cream);
+  text-align: center;
+  padding: 35px 15px;
+  font-size: 11px;
+}
+
+footer p {
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .hero,
+  .features {
+    grid-template-columns: 1fr;
+    padding: 55px 7%;
+    gap: 35px;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .bonus-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .topbar {
+    padding: 15px 5%;
+  }
+
+  .brand {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .bonus-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-button {
+    font-size: 9px;
+  }
+}
